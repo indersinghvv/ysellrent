@@ -1,0 +1,54 @@
+.bodycolor {
+    background-color: whitesmoke;
+}
+
+.tablemyorder td {
+    padding: 0rem;
+}
+
+.active-pink-2 input[type=text]:focus:not([readonly]) {
+    border-bottom: 1px solid #f48fb1;
+    box-shadow: 0 1px 0 0 #f48fb1;
+}
+
+.box {
+    width: 600px;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+}
+
+.has-error {
+    border-color: #cc0000;
+    background-color: #ffff99;
+}
+ul.suggestions{
+    width:80%; /* its width according to input width */
+    
+    height:auto;
+    display:none;
+    padding:0px;
+    margin:0px;
+    z-index: 3;
+   }
+   /* if you want style so that's why i use "li a" also */
+   ul.suggestions li, 
+   ul.suggestions li a{
+    background-color:#fff;
+    color:#000;
+    font-size:13px; /* according to your requirement */
+    font-family:arial;
+    font-weight:normal;
+    padding:0 10px;
+    margin:0px;
+    line-height:30px; /* according to your requirement */
+    display:block;
+    
+   }
+   ul.suggestions li:hover,
+   ul.suggestions li a:hover{
+    text-decoration: none;
+    background-color:#3490dd;
+    color:#fff;
+    text-decoration:normal;
+   }
+   

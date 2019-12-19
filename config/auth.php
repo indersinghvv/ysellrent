@@ -36,6 +36,15 @@ return [
     */
 
     'guards' => [
+        
+
+        'user' => [
+            'driver' => 'session',
+            'provider' => 'users',
+        ],
+
+        
+
         'web' => [
             'driver' => 'session',
             'provider' => 'users',
@@ -66,6 +75,16 @@ return [
     */
 
     'providers' => [
+        'managers' => [
+            'driver' => 'eloquent',
+            'model' => App\Manager::class,
+        ],
+
+        'adminos' => [
+            'driver' => 'eloquent',
+            'model' => App\Admino::class,
+        ],
+
         'users' => [
             'driver' => 'eloquent',
             'model' => App\User::class,
@@ -93,6 +112,24 @@ return [
     */
 
     'passwords' => [
+        'managers' => [
+            'provider' => 'managers',
+            'table' => 'manager_password_resets',
+            'expire' => 60,
+        ],
+
+        'users' => [
+            'provider' => 'users',
+            'table' => 'user_password_resets',
+            'expire' => 60,
+        ],
+
+        'adminos' => [
+            'provider' => 'adminos',
+            'table' => 'admino_password_resets',
+            'expire' => 60,
+        ],
+
         'users' => [
             'provider' => 'users',
             'table' => 'password_resets',
